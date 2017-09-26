@@ -8,6 +8,8 @@ import { AuthorsService } from './author/authors.service';
 import { SummaryPipe } from './course/summary.pipe';
 import { TitleCasePipe } from './input/title-case.pipe';
 
+import { InputFormatDirective } from './input-format.directive';
+
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { FavouriteComponent } from './favourite/favourite.component';
@@ -21,6 +23,7 @@ import { ExamplesComponent } from './example/example.component';
 import { CourseThreeComponent } from './course-three/course-three.component';
 import { StyleComponent } from './style/style.component';
 import { TraversalComponent } from './traversal/traversal.component';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,8 @@ import { TraversalComponent } from './traversal/traversal.component';
     CourseThreeComponent,
     StyleComponent,
     TraversalComponent,
+    InputFormatDirective,
+    ZippyComponent,
   ],
   imports: [
     BrowserModule,
