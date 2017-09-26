@@ -6,9 +6,7 @@
 <hr>
 <inputMirror></inputMirror>
 <hr>
-<favourite
-  [isFavourite]="post.isFavourite"
-  (change)="onFavouriteChange($event)">
+<favourite [isFavourite]="post.isFavourite" (change)="onFavouriteChange($event)">
 </favourite>
 <hr>
 <bootstrap-panel>
@@ -19,9 +17,7 @@
   </div>
 </bootstrap-panel>
 <hr>
-<like
-  [likesCount]="tweet.likesCount"
-  [isActive]="tweet.isLiked">
+<like [likesCount]="tweet.likesCount" [isActive]="tweet.isLiked">
 </like>
 <hr>
 <example></example>
@@ -46,3 +42,5 @@
 <zippy title="Billing Details">
   Billing Details
 </zippy>
+<hr>
+<contact-form></contact-form>
