@@ -12,10 +12,13 @@ import { Component } from '@angular/core';
           </tr>
         </table>
         <button class="btn btn-primary" [class.active]="isActive" id="bootstrap">One</button>
+        <hr>
         <button [style.backgroundColor]="isActive ? 'blue' : 'white'" id="styleBinding">Two</button>
+        <hr>
         <div (click)="onDivClicked()">
           <button (click)="onSave($event)" id="eventBinding">Three</button>
         </div>
+        <hr>
         <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
       `
 })

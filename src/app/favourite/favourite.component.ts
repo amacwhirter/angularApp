@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } fro
 })
 
 export class FavouriteComponent {
-  @Input('is-favourite') isFavourite: boolean;
+  @Input('isFavourite') isFavourite: boolean;
   @Output('change') change = new EventEmitter();
 
   onClick() {

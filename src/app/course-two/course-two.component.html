@@ -1,0 +1,18 @@
+<h4>Hiding DOM divs take 1</h4>
+<div *ngIf="courses.length > 0; then coursesList else noCourses">
+  List of Courses
+</div>
+<ng-template #coursesList>
+  List of Courses
+</ng-template>
+<ng-template #noCourses>
+  No Courses Yet
+</ng-template>
+
+<h4>Hiding DOM divs take 2</h4>
+<div [hidden]="courses.length == 0">
+  List of Courses 2
+</div>
+<div [hidden]="courses.length > 0">
+  No Courses Yet 2
+</div>

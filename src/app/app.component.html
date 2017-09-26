@@ -1,12 +1,16 @@
 <h1>Angular</h1>
+<hr>
 <courses></courses>
+<hr>
 <authors></authors>
-<examples></examples>
-<br>
+<hr>
 <inputMirror></inputMirror>
-
-<favourite [is-favourite]="post.isFavourite" (change)="onFavouriteChange($event)"></favourite>
-
+<hr>
+<favourite
+  [isFavourite]="post.isFavourite"
+  (change)="onFavouriteChange($event)">
+</favourite>
+<hr>
 <bootstrap-panel>
   <ng-container class="heading"></ng-container>
   <div class="body">
@@ -14,8 +18,13 @@
     <p>Some content here...</p>
   </div>
 </bootstrap-panel>
-
+<hr>
 <like
   [likesCount]="tweet.likesCount"
   [isActive]="tweet.isLiked">
 </like>
+<hr>
+<examples></examples>
+<hr>
+<course-two></course-two>
+<hr>
