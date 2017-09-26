@@ -25,6 +25,7 @@ import { StyleComponent } from './style/style.component';
 import { TraversalComponent } from './traversal/traversal.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { AddFormComponent } from './add-form/add-form.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     InputFormatDirective,
     ZippyComponent,
     ContactFormComponent,
+    AddFormComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,46 @@
+<h3>Add Course Bootstrap Form</h3>
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <div ngModelGroup="course" #course="ngModelGroup">
+    <div class="form-group">
+      <label for="courseName">Course Name</label>
+      <input
+        required
+        minlength="5"
+        ngModel
+        name="courseName"
+        #courseName="ngModel"
+        id="courseName"
+        type="text"
+        class="form-control">
+    <div
+      class="alert alert-danger"
+      *ngIf="courseName.touched && !courseName.valid">
+      <div *ngIf="courseName.errors.required">
+        Course name is required.
+      </div>
+      <div *ngIf="courseName.errors.minlength">
+        Course name should be minimum {{ courseName.errors.minlength.requiredLength }} characters.
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="category">
+      Category
+    </label>
+    <select ngModel name="category" id="category-method" class="form-control">
+      <option *ngFor="let category of category" [value]="category.id">
+        {{ category.name }}
+      </option>
+    </select>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" ngModel name="moneyBack">
+      30-Day Money Back Guarantee
+    </label>
+  </div>
+  <p>
+    {{ f.value | json }}
+  </p>
+  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+</form>
