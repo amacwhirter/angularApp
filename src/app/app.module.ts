@@ -15,6 +15,7 @@ import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { AuthorComponent } from './author/author.component';
 import { CourseTwoComponent } from './course-two/course-two.component';
+import { SwitchcaseComponent } from './switchcase/switchcase.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CourseTwoComponent } from './course-two/course-two.component';
     PanelComponent,
     LikeComponent,
     CourseTwoComponent,
+    SwitchcaseComponent,
   ],
   imports: [
     BrowserModule,
