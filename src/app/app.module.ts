@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
 
 import { CoursesService } from './course/courses.service';
@@ -26,6 +26,7 @@ import { TraversalComponent } from './traversal/traversal.component';
 import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AddFormComponent } from './add-form/add-form.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
@@ -48,10 +49,12 @@ import { AddFormComponent } from './add-form/add-form.component';
     ZippyComponent,
     ContactFormComponent,
     AddFormComponent,
+    SignupFormComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     CoursesService,
