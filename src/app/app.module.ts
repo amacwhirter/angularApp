@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ExamplesComponent } from './example.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './course/courses.service';
 import { AuthorsService } from './author/authors.service';
@@ -16,6 +15,7 @@ import { LikeComponent } from './like/like.component';
 import { AuthorComponent } from './author/author.component';
 import { CourseTwoComponent } from './course-two/course-two.component';
 import { SwitchcaseComponent } from './switchcase/switchcase.component';
+import { ExamplesComponent } from './example/example.component';
 
 @NgModule({
   declarations: [

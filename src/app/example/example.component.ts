@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'examples',
+  selector: 'example',
   //string interpolation{{x}}
   template: `
         <h2>{{ title }}</h2>
