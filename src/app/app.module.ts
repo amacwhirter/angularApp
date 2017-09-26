@@ -20,6 +20,7 @@ import { SwitchcaseComponent } from './switchcase/switchcase.component';
 import { ExamplesComponent } from './example/example.component';
 import { CourseThreeComponent } from './course-three/course-three.component';
 import { StyleComponent } from './style/style.component';
+import { TraversalComponent } from './traversal/traversal.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { StyleComponent } from './style/style.component';
     SwitchcaseComponent,
     CourseThreeComponent,
     StyleComponent,
+    TraversalComponent,
   ],
   imports: [
     BrowserModule,
