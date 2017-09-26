@@ -15,7 +15,7 @@ import { AuthorsService } from './authors.service';
       `
 })
 
-export class AuthorsComponent {
+export class AuthorComponent {
   title = "List of Authors";
   authors;
 
