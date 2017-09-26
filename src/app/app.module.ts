@@ -2,6 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
 
+import { CoursesService } from './course/courses.service';
+import { AuthorsService } from './author/authors.service';
+
+import { SummaryPipe } from './course/summary.pipe';
+import { TitleCasePipe } from './input/title-case.pipe';
+
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { FavouriteComponent } from './favourite/favourite.component';
@@ -12,13 +18,8 @@ import { AuthorComponent } from './author/author.component';
 import { CourseTwoComponent } from './course-two/course-two.component';
 import { SwitchcaseComponent } from './switchcase/switchcase.component';
 import { ExamplesComponent } from './example/example.component';
-
-import { CoursesService } from './course/courses.service';
-import { AuthorsService } from './author/authors.service';
-
-import { SummaryPipe } from './course/summary.pipe';
-import { TitleCasePipe } from './input/title-case.pipe';
 import { CourseThreeComponent } from './course-three/course-three.component';
+import { StyleComponent } from './style/style.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CourseThreeComponent } from './course-three/course-three.component';
     CourseTwoComponent,
     SwitchcaseComponent,
     CourseThreeComponent,
+    StyleComponent,
   ],
   imports: [
     BrowserModule,
