@@ -28,6 +28,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponentComponent } from './new-course-form-component/new-course-form-component.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { NewCourseFormComponentComponent } from './new-course-form-component/new
     AddFormComponent,
     SignupFormComponent,
     NewCourseFormComponentComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,
