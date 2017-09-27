@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { CoursesService } from './course/courses.service';
 import { AuthorsService } from './author/authors.service';
@@ -8,7 +9,7 @@ import { AuthorsService } from './author/authors.service';
 import { SummaryPipe } from './course/summary.pipe';
 import { TitleCasePipe } from './input/title-case.pipe';
 
-import { InputFormatDirective } from './input-format.directive';
+import { InputFormatDirective } from './input/input-format.directive';
 
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
@@ -29,6 +30,7 @@ import { AddFormComponent } from './add-form/add-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponentComponent } from './new-course-form-component/new-course-form-component.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PostsComponentComponent } from './posts-component/posts-component.component';
 
 @NgModule({
   declarations: [
@@ -54,11 +56,13 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     SignupFormComponent,
     NewCourseFormComponentComponent,
     ChangePasswordComponent,
+    PostsComponentComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [
     CoursesService,
