@@ -3,8 +3,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
-import { CoursesService } from './course/courses.service';
-import { AuthorsService } from './author/authors.service';
+import { CoursesService } from './services/courses.service';
+import { AuthorsService } from './services/authors.service';
+import { PostService } from './services/post.service';
 
 import { SummaryPipe } from './course/summary.pipe';
 import { TitleCasePipe } from './input/title-case.pipe';
@@ -28,9 +29,9 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
-import { NewCourseFormComponentComponent } from './new-course-form-component/new-course-form-component.component';
+import { NewCourseFormComponent } from './new-course-form-component/new-course-form-component.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-import { PostsComponentComponent } from './posts-component/posts-component.component';
+import { PostsComponent } from './posts-component/posts-component.component';
 
 @NgModule({
   declarations: [
@@ -54,9 +55,9 @@ import { PostsComponentComponent } from './posts-component/posts-component.compo
     ContactFormComponent,
     AddFormComponent,
     SignupFormComponent,
-    NewCourseFormComponentComponent,
+    NewCourseFormComponent,
     ChangePasswordComponent,
-    PostsComponentComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +67,8 @@ import { PostsComponentComponent } from './posts-component/posts-component.compo
   ],
   providers: [
     CoursesService,
-    AuthorsService
+    AuthorsService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })

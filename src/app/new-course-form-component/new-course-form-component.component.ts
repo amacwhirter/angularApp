@@ -6,7 +6,7 @@ import { FormGroup, FormControl, FormArray, FormBuilder, Validators } from '@ang
   templateUrl: './new-course-form-component.component.html',
   styleUrls: ['./new-course-form-component.component.css']
 })
-export class NewCourseFormComponentComponent {
+export class NewCourseFormComponent {
   form;
 
   constructor(fb: FormBuilder){
