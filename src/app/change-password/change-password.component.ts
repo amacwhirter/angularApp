@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormBuilder, Validators } from '@angular/forms';
-import { PasswordValidators } from './password.validators';
+import { PasswordValidators } from './../common/validators/password.validators';
 
 @Component({
   selector: 'change-password',
