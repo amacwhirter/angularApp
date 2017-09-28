@@ -42,6 +42,7 @@ import { HomeComponent } from './home/home.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AllExamplesComponent } from './all-examples/all-examples.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     GithubProfileComponent,
     NotFoundComponent,
     NavbarComponent,
+    AllExamplesComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,11 +83,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpModule,
     RouterModule.forRoot([
       {
-        path: '',
+        path: 'home',
         component: HomeComponent
       },
       {
-        path: 'followers/:username',
+        path: 'followers/:username/:id',
         component: GithubProfileComponent
       },
       {
@@ -95,6 +97,10 @@ import { NavbarComponent } from './navbar/navbar.component';
       {
         path: 'posts',
         component: PostsComponent
+      },
+      {
+        path: 'examples',
+        component: AllExamplesComponent
       },
       {
         path: '**',

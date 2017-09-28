@@ -1,0 +1,55 @@
+<h1>Angular</h1>
+<hr>
+<courses></courses>
+<hr>
+<authors></authors>
+<hr>
+<inputMirror></inputMirror>
+<hr>
+<favourite [isFavourite]="post.isFavourite" (change)="onFavouriteChange($event)">
+</favourite>
+<hr>
+<bootstrap-panel>
+  <ng-container class="heading"></ng-container>
+  <div class="body">
+    <h2>Body</h2>
+    <p>Some content here...</p>
+  </div>
+</bootstrap-panel>
+<hr>
+<like [likesCount]="tweet.likesCount" [isActive]="tweet.isLiked">
+</like>
+<hr>
+<example></example>
+<hr>
+<course-two></course-two>
+<hr>
+<switchcase></switchcase>
+<hr>
+<course-three></course-three>
+<hr>
+<app-style></app-style>
+<hr>
+<traversal></traversal>
+<hr>
+<h3>Custom Directive with Blur and Focus</h3>
+<input type="text" [appInputFormat]="uppercase">
+<hr>
+<h3>Zippy Component</h3>
+<zippy title="Shipping Details">
+  Shipping Details Content
+</zippy>
+<zippy title="Billing Details">
+  Billing Details
+</zippy>
+<hr>
+<contact-form></contact-form>
+<hr>
+<add-form></add-form>
+<hr>
+<signup-form></signup-form>
+<hr>
+<new-course-form-component></new-course-form-component>
+<hr>
+<change-password></change-password>
+<hr>
