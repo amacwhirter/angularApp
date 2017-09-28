@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Observable';
 import { AppError } from '../common/app-error';
 import { NotFoundError } from '../common/not-found-error';
 import { BadInput } from '../common/bad-input';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/toPromise'; <-- use if want to use promise rather than observable
 import 'rxjs/add/observable/throw';
 
 @Injectable()
@@ -20,6 +21,7 @@ export class DataService {
   }
 
   create(resource){
+    // return Observable.throw(new AppError()); <-- shows what happens in optimistic failure.
     return this.http.post(this.url, JSON.stringify(resource))
       .map(response => response.json())
       .catch(this.handleError);
