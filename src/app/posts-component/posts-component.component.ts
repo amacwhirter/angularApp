@@ -3,6 +3,7 @@ import { PostService } from './../services/post.service';
 import { AppError } from '../common/app-error';
 import { NotFoundError } from '../common/not-found-error';
 import { BadInput } from '../common/bad-input';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'posts-component',
@@ -16,23 +17,20 @@ export class PostsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getPosts()
-      .subscribe(
-        response => {
-          this.posts = response.json();
-      });
+    this.service.getAll()
+      .subscribe(posts => this.posts = posts);
   }
 
   createPost(input: HTMLInputElement) {
     let post: any = { title: input.value };
     input.value = '';
 
-    this.service.createPost(post)
+    this.service.create(post)
       .subscribe(
-        response => {
-          post.id = response.json().id;
+        newPost => {
+          post.id = newPost.id;
           this.posts.splice(0, 0, post);
-          console.log(response.json());
+          console.log(newPost);
       },
         (error: AppError) => {
           if (error instanceof BadInput){
@@ -43,17 +41,17 @@ export class PostsComponent implements OnInit {
   }
 
   updatePost(post) {
-    this.service.updatePost(post)
+    this.service.update(post)
       .subscribe(
-        response => {
-          console.log(response.json());
+        updatedPost => {
+          console.log(updatedPost);
       });
   }
 
   deletePost(post) {
-    this.service.deletePost(post.id)
+    this.service.delete(post.id)
       .subscribe(
-        response => {
+        () => {
           let index = this.posts.indexOf(post);
           this.posts.splice(index, 1);
       },
