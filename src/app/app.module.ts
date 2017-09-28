@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { ErrorHandler } from '@angular/core';
 
 import { CoursesService } from './services/courses.service';
 import { AuthorsService } from './services/authors.service';
 import { PostService } from './services/post.service';
+import { AppErrorHandler } from './common/app-error-handler';
 
 import { SummaryPipe } from './course/summary.pipe';
 import { TitleCasePipe } from './input/title-case.pipe';
@@ -68,7 +70,8 @@ import { PostsComponent } from './posts-component/posts-component.component';
   providers: [
     CoursesService,
     AuthorsService,
-    PostService
+    PostService,
+    { provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [AppComponent]
 })
