@@ -1,7 +1,7 @@
 <h3>Github Followers</h3>
 <div *ngFor="let follower of followers" class="media">
   <div class="media-left">
-    <a href="#">
+    <a [routerLink]="['/followers', follower.login, follower.id]">
       <img class="avatar media-object" src="{{ follower.avatar_url }}" alt="...">
     </a>
   </div>
@@ -9,6 +9,6 @@
     <h4 class="media-heading">
     <a [routerLink]="['/followers', follower.login, follower.id]">{{ follower.login }}</a>
     </h4>
-    <a href="follower.html_url">{{ follower.html_url }}</a>
+    <a href="{{follower.html_url}}" target="_blank">{{ follower.html_url }}</a>
   </div>
 </div>
