@@ -43,6 +43,8 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AllExamplesComponent } from './all-examples/all-examples.component';
+import { ArchiveComponent } from './archive/archive.component';
+import { BlogHomeComponent } from './blog-home/blog-home.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +77,8 @@ import { AllExamplesComponent } from './all-examples/all-examples.component';
     NotFoundComponent,
     NavbarComponent,
     AllExamplesComponent,
+    ArchiveComponent,
+    BlogHomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,6 +101,14 @@ import { AllExamplesComponent } from './all-examples/all-examples.component';
       {
         path: 'posts',
         component: PostsComponent
+      },
+      {
+        path: 'blog',
+        component: BlogHomeComponent
+      },
+      {
+        path: 'archive/:year/:month',
+        component: ArchiveComponent
       },
       {
         path: 'examples',
